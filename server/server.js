@@ -9,7 +9,7 @@ app.use(bodyP.json());
 app.use('/', mainRouter);
 app.use('/reg', regRouter);
 
-console.log('kostya')
+
 
 
 app.listen(3000);
