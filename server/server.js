@@ -10,6 +10,4 @@ app.use('/', mainRouter);
 app.use('/reg', regRouter);
 
 
-
-
 app.listen(3000);
