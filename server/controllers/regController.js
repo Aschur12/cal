@@ -1,50 +1,50 @@
 const User = require('../models/user.js')
-const connection = require('../bd/bdIn.js')
+const connection = require('../db/bdIn.js')
 const getIpadress = require('../services/ipService.js')
 const getCountry = require('../services/countryService.js')
 
 
 addUser = (req, res)=>{
+
+    let bodyProperties = ['login', 'password', 'email']
+
     const body = req.body;
-    if (Object.keys(body).length === 0) {
-        return res.status(400).json({
-            success: false,
-            error: 'Вы не ввели login/password',
-        });
-    };
-    let error_inn;
+    let fullBody = true
+    let str = ''
+
+    for (property of bodyProperties){
+      if (body[property].length === 0) {
+        fullBody = false
+        str += property + ' '
+      };
+    }
+    
+    if (!fullBody){
+      return res.status(400).json({
+        success: false,
+        error: str + 'required',
+      });
+    }
+
     const user = new User(body.login, body.password, body.email);
     user.ip = getIpadress();
     user.country = getCountry(user.ip);
     const text = `insert into users (login, password, email, ip, country) values ('${user.login}', '${user.password}', '${user.email}', '${user.ip}', '${user.country}')`;
     
     connection.promise().query(text)
-      .then( ([rows,fields]) => {
-    console.log(rows);
-  })
-  .catch(console.log)
-    
-    
-    
-    
-    // connection.query(text, function(err,result) {
-    //     if (err) {
-    //         console.log(err);
-    //       error_inn = err;
-    //     }
-    // });
-    
-    console.log(error_inn);
-   if (error_inn) {
-       return res.status(400).json({
-        success: false,
-        error: 'Вы не ввели login',
-    });
-   }   
-   return res.status(201).json({
-            success: true,
-            message: 'User added',
-            });  
+    .then(() => {
+      return res.status(201).json({
+          success: true,
+          id: movie._id,
+          message: 'User added',
+      })
+    })
+    .catch(error => {
+        return res.status(400).json({
+            error,
+            message: 'User not added',
+        })
+  })   
 };
 
 module.exports = {addUser};
