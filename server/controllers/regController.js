@@ -7,7 +7,6 @@ const getCountry = require('../services/countryService.js')
 addUser = (req, res)=>{
 
     let bodyProperties = ['login', 'password', 'email']
-
     const body = req.body;
     let fullBody = true
     let str = ''
