@@ -5,7 +5,7 @@ const getCountry = require('../services/countryService.js')
 const validator = require('validator');
 
 
-addUser = (req, res)=>{
+addUser = async (req, res)=>{
 
     let bodyProperties = ['login', 'password', 'email']
     const body = req.body;
@@ -28,16 +28,17 @@ addUser = (req, res)=>{
 
     
     const user = new User(body.login, body.password, body.email);
-    user.ip = getIpadress();
-    user.country = getCountry(user.ip);
-    const text = `insert into users (login, password, email, ip, country) values ('${user.login}', '${user.password}', '${user.email}', '${user.ip}', '${user.country}')`;
-    if (validator.isEmail(user.email)&&validator.isStrongPassword(user.password)){
- 
+
+    
+    if (validator.isEmail(user.email) && validator.isStrongPassword(user.password)){
+      user.ip = await getIpadress();
+      user.country = await getCountry(user.ip);
+      
+      const text = `insert into users (login, password, email, ip, country) values ('${user.login}', '${user.password}', '${user.email}', '${user.ip}', '${user.country}')`;
       connection.promise().query(text)
       .then(() => {
         return res.status(201).json({
             success: true,
-            id: movie._id,
             message: 'User added',
         })
       })
