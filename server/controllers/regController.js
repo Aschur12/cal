@@ -56,7 +56,11 @@ addUser = async (req, res)=>{
   };   
 };
 
-module.exports = {addUser};
+addGet = (req, res)=>{
+  return res.send('Hello');
+};
+
+module.exports = {addUser, addGet};
 
 
 
