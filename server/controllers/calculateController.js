@@ -1,13 +1,19 @@
 const calculService = require('../services/calculService.js')
 
-const calculCon = (weight, price_mat, waste, cycle, cavity, price_sells, price_lab)=>{
-let pr_part_mat = price_mat * weight * (1+(waste/100))/1000;
-let pr_part_lab = price_lab * cycle/(86000 * cavity)
-let qua_month = 86000 * cavity * 29 / cycle_2
-let cost_ua = (pr_part_mat + pr_part_lab).toFixed(4);
-let profit = (price_sells - cost_ua) * qua_month;
-let profitUSD = profit/calculService();
+calculCon = (req,res)=>{
+    const body = req.body;
+    let pr_part_mat = (body.price_mat * body.weight * (1+(body.waste/100)))/1000;
+    let pr_part_lab = body.price_lab * body.cycle/(86000 * body.cavity)
+    let qua_month = 86000 * body.cavity * 29 / body.cycle
+    let cost_ua = (pr_part_mat + pr_part_lab).toFixed(4);
+    let profit = (body.price_sells - cost_ua) * qua_month;
+    let profitUSD = profit/calculService();
+    console.log(profit)
+return res.status(201).json({
+    quantity: qua_month, cost_ua: cost_ua, profit_ua: profit, profit_ua: profitUSD 
+})
+
 };
 
-module.exports = calculCon;
+module.exports = {calculCon};
 
