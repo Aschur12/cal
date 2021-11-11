@@ -10,10 +10,13 @@ calculCon = (req,res)=>{
     let profitUSD = profit/calculService();
     console.log(profit)
 return res.status(201).json({
-    quantity: qua_month, cost_ua: cost_ua, profit_ua: profit, profit_ua: profitUSD 
+    quantity: qua_month, cost_ua: cost_ua, profit_ua: profit, profit_usd: profitUSD 
 })
-
 };
 
-module.exports = {calculCon};
+calculGet = (req,res)=>{
+    res.send('Hello');
+}
+
+module.exports = {calculCon, calculGet};
 
