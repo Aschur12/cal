@@ -1,12 +1,12 @@
-require('dotenv').config()
+// require('dotenv').config()
 const nodemailer = require('nodemailer');
 
 function sendMail () {
     const trasport = nodemailer.createTransport({
         service: "gmail",
             auth: {
-            user: process.env.EMAIL,
-            pass: process.env.PASSWORD
+            user: 'aschur1979@gmail.com',
+            pass: 'Aschur121979!'
             }    
     });
     const mailOptions = {
@@ -14,12 +14,7 @@ function sendMail () {
         to: 'aschur1979@gmail.com',
         subject: 'Вложение файла',
         text: 'Письмо тест',
-        attachments: [{
-            filename: 'vlad.png',
-            path: __dirname + '/vlad.png'
-        }
-            
-        ]
+
     };
     trasport.sendMail(mailOptions,(err)=>{
         console.log(err);
@@ -28,3 +23,4 @@ function sendMail () {
 }
 
 sendMail();
+console.log(process.env.EMAIL)

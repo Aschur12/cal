@@ -28,7 +28,6 @@ addUser = async (req, res)=>{
 
     
     const user = new User(body.login, body.password, body.email);
-
     
     if (validator.isEmail(user.email) && validator.isStrongPassword(user.password)){
       user.ip = await getIpadress();
