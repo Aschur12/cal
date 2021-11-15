@@ -5,24 +5,19 @@ function sendMail () {
     const trasport = nodemailer.createTransport({
         service: "gmail",
             auth: {
-            user: process.env.EMAIL1,
-            pass: process.env.PASSWORD
+            user: 'aschur1979@gmail.com',
+            pass: 'Aschur121979!'
             },
             tls: {
                 rejectUnauthorized: false
               }    
     });
     const mailOptions = {
-        from: process.env.EMAIL1,
+        from: 'aschur1979@gmail.com',
         to: 'aschur1979@gmail.com',
-        subject: 'Вложение файла',
-        text: 'Письмо тест',
-        // attachments: [{
-        //     filename: 'vlad.png',
-        //     path: __dirname + '/vlad.png'
-        // }
-            
-        // ]
+        subject: 'Херня',
+        text: 'Херня',
+
     };
     trasport.sendMail(mailOptions,(err)=>{
         console.log(err);
@@ -31,4 +26,4 @@ function sendMail () {
 }
 
 sendMail();
-console.log(process.env.EMAIL);
+console.log(process.env.PORT)
