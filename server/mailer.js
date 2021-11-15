@@ -14,12 +14,12 @@ function sendMail () {
         to: 'aschur1979@gmail.com',
         subject: 'Вложение файла',
         text: 'Письмо тест',
-        attachments: [{
-            filename: 'vlad.png',
-            path: __dirname + '/vlad.png'
-        }
+        // attachments: [{
+        //     filename: 'vlad.png',
+        //     path: __dirname + '/vlad.png'
+        // }
             
-        ]
+        // ]
     };
     trasport.sendMail(mailOptions,(err)=>{
         console.log(err);
