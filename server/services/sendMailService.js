@@ -1,4 +1,4 @@
-// require('dotenv').config()
+require('dotenv').config()
 const nodemailer = require('nodemailer');
 
 function sendMail () {
@@ -7,10 +7,13 @@ function sendMail () {
             auth: {
             user: 'aschur1979@gmail.com',
             pass: 'Aschur121979!'
-            }    
+            },
+            tls: {
+                rejectUnauthorized: false
+              }    
     });
     const mailOptions = {
-        from: process.env.EMAIL,
+        from: 'aschur1979@gmail.com',
         to: 'aschur1979@gmail.com',
         subject: 'Вложение файла',
         text: 'Письмо тест',
