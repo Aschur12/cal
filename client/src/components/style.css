@@ -1,0 +1,43 @@
+.mainNavbar {
+    position: absolute;
+width: 1440px;
+height: 140px;
+left: 0px;
+top: 0px;
+background: rgb(159, 214, 171);
+}
+.regist_navbar {
+position: "absolute";
+left: 73.61%;
+right: 1.74%;
+top: 20.71%;
+bottom: 33.95%;
+background: #FFFFFF
+}
+.regBut {
+    position: absolute;
+    left: 87.01%;
+    right: 2.15%;
+    top: 13.38%;
+    bottom: 46.62%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #daeaec;
+}
+.logo {
+    position: absolute;
+width: 343px;
+left: calc(50% - 343px/2 - 548.5px);
+top: 0%;
+bottom: 0%;
+
+background-image: url('./img/Logoremov.png');
+}
