@@ -1,10 +1,10 @@
 import './App.css';
-import Regist from './components/regist.js';
+import Mainpage from './components/main.js';
 
 function App() {
   return (
     <div className="App">
-      <Regist/>,
+      <Mainpage/>,
     </div>
   );
 }
