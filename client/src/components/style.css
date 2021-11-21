@@ -1,0 +1,97 @@
+.mainNavbar {
+    position: fixed;
+    width: 100%;
+    height: 140px;
+    left: 0px;
+    top: 0px;
+    background: rgb(159, 214, 171);
+}
+.regist_navbar {
+    position: absolute;
+    left: 73.61%;
+    right: 1.74%;
+    top: 20.71%;
+    bottom: 33.95%;
+    background: #ffffff00
+}
+.regBut {
+    position: absolute;
+    /* left: 87.01%; */
+    right: 2%;
+    top: 13.38%;
+    /* bottom: 46.62%; */
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #0a0a0a;
+}
+.inBut {
+    position: absolute;
+left: 35%;
+/* right: 20.56%; */
+top: 13.38%;
+/* bottom: 46.62%; */
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 26px;
+line-height: 30px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+.logo {
+    position: absolute;
+width: 343px;
+left: 0%;
+top: 0%;
+bottom: 0%;
+
+background-image: url('./img/Logoremov.png');
+}
+.mainBut {
+    position: absolute;
+left: 25.69%;
+right: 64.79%;
+top: 29.29%;
+bottom: 42.71%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
+.uslugiBut {
+    position: absolute;
+left: 42.29%;
+right: 48.26%;
+top: 29.29%;
+bottom: 42.86%;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+}
