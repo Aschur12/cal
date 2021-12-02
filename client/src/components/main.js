@@ -1,14 +1,11 @@
 import {Component} from "react";
-import Regist from './regist'
-import Section from "./backImg";
-
-
+import NavBar from "./navbar";
 
 class Mainpage extends Component {
     render() {
         return (
             
-            <Section/>
+            <NavBar/>
             
         )
     }
