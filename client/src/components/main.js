@@ -7,8 +7,9 @@ import Section from "./backImg";
 class Mainpage extends Component {
     render() {
         return (
-            <Section/>,
-            <Regist/>
+            
+            <Section/>
+            
         )
     }
 }
