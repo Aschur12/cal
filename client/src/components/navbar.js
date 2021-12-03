@@ -4,6 +4,8 @@ import '../main.css'
 class NavBar extends Component {
   render() {
     return (
+      <div className="main_page">
+      <div className="container">
       <div className="navbar">
                 <div className="div_logo">
                     <img className="logo" src="./img/KMA_Logo.png" alt="KMA Technology"></img>
@@ -13,7 +15,8 @@ class NavBar extends Component {
                 <button className="main_btn">Контакты</button>
                 <button className="main_btn">Login</button>
             </div>
-    );
+    </div>
+    </div>);
   }
 }
 
