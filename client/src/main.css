@@ -1,5 +1,5 @@
 * {
-    /* box-sizing: border-box; */
+    
     margin: 0;
     padding: 0;
 }
@@ -8,50 +8,56 @@
     width: 100%;
     height: 100vh;
     margin: 0 auto;
-    /* overflow: hidden; */
+    
     }
 .main_page {
-    min-height: 800px;
+    min-height: 100vh;
     background: url('./components/img/main_bg_1.png') center center/cover no-repeat;
     z-index: -1;
 }
-.main_page .navbar {
-    /* position: fixed; */
+.navbar {
     display: flex;
     justify-content: space-around;
-    align-items: top;
+    align-items: center;
     height: 25vh;
     width: 100vw;
 }
 
-.main_page .navbar .main_btn {
+.main_btn {
     height: 35px;
-    margin-top: 55px;
-    font-size: 36px;
+    /* margin-top: 55px; */
+    font-size: 2vw;
     font-weight: 700;
     color: #000000;
     border: none;
     background: none;
     cursor: pointer;
 }
-.main_page .navbar .main_btn:hover {
+
+.main_btn:hover {
     color: red;
-    padding-bottom: 1.1em;/*отступмеждуподчеркиваниемитекстом*/
+    padding-bottom: 1.1em;
     border-bottom: 0.1em solid red;
     transform: scale(1.2) ;
 }
-.main_page .main_header {
+.div_logo {
+    height: inherit;
+    width: 18%;
+    background: url('./components/img/KMA_Logo.png') ;
+}
+/*
+.main_page, .main_header {
     margin-top: 5vh;
     text-align: center;
     font-family: Arial;
     font-size: 24px;
 }
-.main_page .main_btn_2 {
+.main_page, .main_btn_2 {
     display: flex;
     justify-content: space-around;
     margin-top: 86px;
 }
-.main_page .main_btn_2 .main_cold {
+.main_page, .main_btn_2, .main_cold {
     font-family: Arial;
     font-size: 36px;
     width: 432px;
@@ -63,7 +69,7 @@
     background: #FC5252;
     cursor: pointer;
 }
-.main_page .main_btn_2 .main_hot {
+.main_page, .main_btn_2, .main_hot {
     font-family: Arial;
     font-size: 36px;
     width: 432px;
@@ -75,12 +81,12 @@
     background: #FC5252;
     cursor: pointer;
 }
-.main_page .logo_simpac_jnh {
+.main_page, .logo_simpac_jnh {
     display: flex;
     justify-content: space-around;
     margin-top: 36px;
 }
-.main_page .contacts {
+.main_page, .contacts {
     display: flex;
     justify-content: space-around;
     margin-top: 24px;
@@ -92,7 +98,7 @@
     background: url('./components/img/2.png') center center/cover no-repeat;
     z-index: -1;
 }
-.second_page .second_head {
+.second_page, .second_head {
     position: absolute;
     width: 265px;
     height: 55px;
@@ -105,7 +111,7 @@
     color: #000000;
     text-decoration: underline;
 }
-.second_page .second_text_1 {
+.second_page, .second_text_1 {
     position: absolute;
     width: 812px;
     height: 218px;
@@ -115,11 +121,10 @@
     font-style: normal;
     font-weight: 700;
     font-size: 26px;
-    /* line-height: 30px; */
     color: #000000;
     text-align: justify;
 }
-.second_page .letter {
+.second_page, .letter {
     position: absolute;
     width: 377px;
     height: 535px;
@@ -127,17 +132,17 @@
     top: 244px;
     transition: 1s;
 } 
-.second_page .letter:hover {
+.second_page, .letter:hover {
     transform: scale(1.2)
 }
-.second_page .benefit {
+.second_page, .benefit {
     position: absolute;
     width: 812px;
     height: 481px;
     left: 78px;
     top: 503px;
 }
-.second_page .benefit .benefit_head {
+.second_page, .benefit, .benefit_head {
     font-family: Arial;
     font-style: normal;
     font-weight: 500;
@@ -146,7 +151,7 @@
     text-align: center;
     text-decoration: underline;
 }
-.second_page .benefit .benefit_text {
+.second_page, .benefit, .benefit_text {
     font-family: Arial;
     font-style: normal;
     font-weight: 700;
@@ -154,7 +159,7 @@
     margin-top: 54px;
     text-align: justify;
 }
-.three_page .three_page_head {
+.three_page, .three_page_head {
     width: 32vw;
     height: auto;
     font-family: Arial;
@@ -166,4 +171,4 @@
     border-radius: 25px;
     margin: 0 auto;
     margin-top: 14%;
-}
+} */
