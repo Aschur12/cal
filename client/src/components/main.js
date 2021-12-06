@@ -1,13 +1,13 @@
 import {Component} from "react";
 import NavBar from "./navbar";
-import '../main.css'
+import "../main.css"
 
 class Mainpage extends Component {
     render() {
         return (
         <section className="main_page">
-                <div className="container">
-                <NavBar/>,
+            <div className="container">
+                <NavBar/>
                 <div className="main_header">
                     <h1>Инжиниринговая компания "КМА Технология"</h1>
                     <h2>полный спектр услуг связанных с:<br/>
@@ -19,9 +19,10 @@ class Mainpage extends Component {
                     <button className="main_cold">Холодная штамповка</button>
                     <button className="main_hot">Горячая штамповка</button>
                 </div>
-                <div className="logo_simpac_jnh">
-                    <img src="./img/SIMPAC_logo.png" alt="Simpac"></img>
-                    <img src="./img/JNH_logo.png" alt="JNH"></img>
+                <div className="logo_sj">
+                    <div className="logo_simpac"></div>
+                    <div className="logo_jhg"></div>
+                    
                 </div>
                 <div className="contacts">
                     <div>Email: kmatechnologyua@gmail.com</div>
