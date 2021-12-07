@@ -22,7 +22,6 @@ class Mainpage extends Component {
                 <div className="logo_sj">
                     <div className="logo_simpac"></div>
                     <div className="logo_jhg"></div>
-                    
                 </div>
                 <div className="contacts">
                     <div>Email: kmatechnologyua@gmail.com</div>
