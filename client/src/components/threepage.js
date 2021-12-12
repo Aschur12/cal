@@ -7,7 +7,7 @@ class Threepage extends Component {
         return (
             <section className="three_page">
             <div className="container">
-                <NavBar/>,
+                <NavBar/>
                  <div class="three_page_head">Холодная штамповка</div>
                  <div className="three_page_text">
                     <div className="three_page_text_1">Технология пресс-формования - наиболее близкая к нашей жизни технология производства, так  70% автомобильных кузовов, 60% мобильных телефонов и 50% бытовой техники изготавливаются из штампованных изделий.</div>

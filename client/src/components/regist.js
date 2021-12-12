@@ -46,7 +46,7 @@ class Regist extends Component {
                 <input type="text" className="login_input" placeholder="login" value={login} onChange={this.change_input_login}></input>
                 <input type="text" className="password_input" placeholder="PASSWORD" value={password} onChange={this.change_input_password}></input>
                 <input type="text" className="email_input" placeholder="E-MAIL" value={email} onChange={this.change_input_email}></input>
-                <button  className="btn_reg_page">Регистрация</button>
+                <button  className="btn_reg_page" onClick={this.to_save_user}>Регистрация</button>
             </div>
     </section>
         )
