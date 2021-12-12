@@ -5,7 +5,7 @@ import Second from './components/secondpage.js';
 import Regist from "./components/regist.js";
 import Threepage from './components/threepage.js';
 import "./App.css"
-// import NavBar from "./components/navbar.js";
+
 
 function App() {
   return (
