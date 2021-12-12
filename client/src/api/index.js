@@ -5,3 +5,4 @@ const api = axios.create({
 })
 
 export const getMainPage=()=>api.get('/')
+export const save_user=payload=>api.post('/reg', payload)
